@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>晴空新闻</title>
+        <style media="screen">
+            .guide {
+                position: absolute;
+                top:0;
+                background-color: #484848;
+                width: 100%;
+                height: 50px;
+                color: white;
+            }
+            .weather {
+                font-size: 18px;
+            }
+            .report {
+                position: absolute;
+                top: 1%;
+                right: 4%;
+            }
+            .report a {
+                color: white;
+            }
+            .logo {
+                position: absolute;
+                left: 10%;
+                top: 8%;
+            }
+            .logo div {
+                float: left;
+            }
+            .logo_picture {
+                height:80px;
+                width: 80px;
+            }
+            .left_list {
+                position: absolute;
+                left: 12%;
+                top: 20%;
+            }
+            .left_list li {
+                list-style-type: none;
+                font-size: 24px;
+                height: 50px;
+                width: 100px;
+                text-align: center;
+            }
+            .left_list li:hover {
+                background-color: orange;
+                color: white;
+            }
+            .news {
+                position: absolute;
+                left: 40%;
+                top: 20%;
+                font-size: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="guide">
+            <div class="weather">
+                <pre>天气：晴  30°/22°</pre>
+            </div>
+            <div class="report">
+                <h4>
+                    <a href="">反馈</a>
+                </h4>
+            </div>
+        </div>
+        <div class="logo">
+            <div class="">
+                <img src="logo.png" alt="" class="logo_picture">
+            </div>
+            <div class="">
+                <h1>晴空新闻</h1>
+            </div>
+        </div>
+        <div class="left_list">
+            <ul>
+                <li>推荐</li>
+                <li>热点</li>
+                <li>科技</li>
+                <li>娱乐</li>
+                <li>游戏</li>
+                <li>更多</li>
+            </ul>
+        </div>
+        <div class="news">
+            这里是新闻
+        </div>
+    </body>
+</html>
