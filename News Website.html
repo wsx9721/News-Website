@@ -46,10 +46,25 @@
                 height: 50px;
                 width: 100px;
                 text-align: center;
+                border-radius:5px;
             }
             .left_list li:hover {
                 background-color: orange;
                 color: white;
+            }
+            .search {
+                position: absolute;
+                right: 15%;
+                top: 8%;
+            }
+            .search_box {
+                height: 25px;
+                width: 150px;
+                border-radius:5px;
+            }
+            .search_button {
+                height: 25px;
+                border-radius:5px;
             }
             .news {
                 position: absolute;
@@ -90,6 +105,10 @@
         </div>
         <div class="news">
             这里是新闻
+        </div>
+        <div class="search">
+            <input type="text" name="" value="" placeholder="请输入要查找的内容" class="search_box">
+            <button type="button" name="button" class="search_button">查找</button>
         </div>
     </body>
 </html>
