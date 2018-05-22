@@ -72,6 +72,14 @@
                 top: 20%;
                 font-size: 50px;
             }
+            .main {
+                position: absolute;
+                left: 29%;
+                top: 22%;
+            }
+            /* .main div {
+                display: none;
+            } */
         </style>
     </head>
     <body>
@@ -95,20 +103,78 @@
         </div>
         <div class="left_list">
             <ul>
-                <li>推荐</li>
-                <li>热点</li>
-                <li>科技</li>
-                <li>娱乐</li>
-                <li>游戏</li>
-                <li>更多</li>
+                <li id="tab1" onclick="changeTab(this.id)" class="selected">推荐</li>
+                <li id="tab2" onclick="changeTab(this.id)">热点</li>
+                <li id="tab3" onclick="changeTab(this.id)">科技</li>
+                <li id="tab4" onclick="changeTab(this.id)">娱乐</li>
+                <li id="tab5" onclick="changeTab(this.id)">游戏</li>
+                <li id="tab6" onclick="changeTab(this.id)">更多</li>
             </ul>
         </div>
-        <div class="news">
-            这里是新闻
-        </div>
+        <span class="main">
+            <div id="c1" class="show">
+                推荐新闻
+            </div>
+            <div id="c2">
+                热点新闻
+            </div>
+            <div id="c3">
+                科技新闻
+            </div>
+            <div id="c4">
+                娱乐新闻
+            </div>
+            <div id="c5">
+                游戏新闻
+            </div>
+            <div id="c6">
+                更多
+            </div>
+        </span>
         <div class="search">
             <input type="text" name="" value="" placeholder="请输入要查找的内容" class="search_box">
             <button type="button" name="button" class="search_button">查找</button>
         </div>
     </body>
+
+    <script type="text/javascript">
+    var tabs = [
+        {
+            tabId: 'tab1',
+            contentId: 'c1'
+        },
+        {
+            tabId: 'tab2',
+            contentId: 'c2'
+        },
+        {
+            tabId: 'tab3',
+            contentId: 'c3'
+        },
+        {
+            tabId: 'tab4',
+            contentId: 'c4'
+        },
+        {
+            tabId: 'tab5',
+            contentId: 'c5'
+        },
+        {
+            tabId: 'tab6',
+            contentId: 'c6'
+        }
+    ]
+
+    function changeTab(id) {
+        for (var i of tabs) {
+            if (i.tabId === id) {
+                document.getElementById(i.tabId).className = 'selected'
+                document.getElementById(i.contentId).className = 'show'
+            } else {
+                document.getElementById(i.tabId).className = ''
+                document.getElementById(i.contentId).className = ''
+            }
+        }
+    }
+    </script>
 </html>
