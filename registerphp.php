@@ -27,15 +27,12 @@ if($_POST["Submit"] == "注册")
 
             }
             $conn = null;
-        else
-        {
-            echo "<script>alert('密码不一致！'); history.go(-1);</script>";
-        }
+        // else
+        // {
+        //     echo "<script>alert('密码不一致！'); history.go(-1);</script>";
+        // }
     }
 }
-// else
-// {
-// 	echo "<script>alert('提交未成功！'); history.go(-1);</script>";
-// }
+
 
 ?>

@@ -22,24 +22,26 @@
     </head>
     <body>
         <div class="register">
-            <br>
-            <br>
-            <br>
-            <br>
-            <div class="words">
-                欢迎来到晴空新闻
-            </div>
-            <br><br>
-            <input type="text" name="username" value="" placeholder="用户名">
-            <br><br>
-            <input type="password" name="password" value="" placeholder="请输入密码">
-            <br><br>
-            <input type="password" name="confirm" value="" placeholder="请再次输入密码">
-            <br><br>
-            <input type="Submit" name="Submit" value="注册">
-            <!-- <button type="Submit" name="Submit">注册</button> -->
-            <br><br>
-            <a href="file:///Users/wsx9721/Documents/News-Website/News%20Website.html">点按以返回主页面</a>
+            <form class="" action="registerphp.php" method="post">
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="words">
+                    欢迎来到晴空新闻
+                </div>
+                <br><br>
+                <input type="text" name="username" value="" placeholder="用户名">
+                <br><br>
+                <input type="password" name="password" value="" placeholder="请输入密码">
+                <br><br>
+                <input type="password" name="confirm" value="" placeholder="请再次输入密码">
+                <br><br>
+                <input type="Submit" name="Submit" value="注册">
+                <!-- <button type="Submit" name="Submit">注册</button> -->
+                <br><br>
+                <a href="file:///Users/wsx9721/Documents/News-Website/News%20Website.html">点按以返回主页面</a>
+            </form>
         </div>
     </body>
 </html>
