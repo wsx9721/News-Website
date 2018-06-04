@@ -185,13 +185,15 @@
             <button type="button" name="button" class="search_button">查找</button>
         </div>
         <div class="login_and_register">
-            <input type="text" name="username" value="" placeholder="请输入账号" class="username_input">
-            <br/>
-            <input type="password" name="password" value="" placeholder="请输入密码" class="password_input">
-            <br/><br/>
-            <input type="submit" name="submit" value="登录" class="login_input">
-            <!-- <button type="submit" name="submit" class="login_button">登录</button> -->
-            <a href="file:///Users/wsx9721/Documents/News-Website/register.html"><button type="button" name="button">注册</button></a>
+            <form class="" action="login.php" method="POST">
+                <input type="text" name="username" value="" placeholder="请输入账号" class="username_input">
+                <br/>
+                <input type="password" name="password" value="" placeholder="请输入密码" class="password_input">
+                <br/><br/>
+                <input type="submit" name="submit" value="登录" class="login_input">
+                <a href="file:///Users/wsx9721/Documents/News-Website/register.html"><button type="button" name="button">注册</button></a>
+                <!-- <button type="submit" name="submit" class="login_button">登录</button> -->
+            </form>
         </div>
         <div class="advertisement">
             <a href="http://app.tanwan.com/htmlcode/17443.html"><img src="game_advertisement.gif" alt=""></a>

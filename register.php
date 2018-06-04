@@ -22,7 +22,7 @@
     </head>
     <body>
         <div class="register">
-            <form class="" action="registerphp.php" method="post">
+            <form class="" action="registerphp.php" method="POST">
                 <br>
                 <br>
                 <br>
