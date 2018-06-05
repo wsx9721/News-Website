@@ -40,7 +40,7 @@
                 <input type="Submit" name="Submit" value="注册">
                 <!-- <button type="Submit" name="Submit">注册</button> -->
                 <br><br>
-                <a href="file:///Users/wsx9721/Documents/News-Website/News%20Website.html">点按以返回主页面</a>
+                <a href="News-Website.php">点按以返回主页面</a>
             </form>
         </div>
     </body>

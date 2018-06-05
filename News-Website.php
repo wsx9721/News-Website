@@ -189,9 +189,9 @@
         </span>
         <form class="" action="comment.php" method="POST">
             <div class="comment">
-                <?php if (isset($_POST['comment'])) {
-                    echo $_POST['comment'];
-                    $_POST['comment'] = null;
+                <?php if (isset($comment)) {
+                    echo $comment;
+                    $comment = null;
                     echo "<br/>";
                     echo "<input type='text' name='comment' value='' placeholder='我再说两句...' class='comment_input'>
                     <input type='SUBMIT' name='SUBMIT' value='评论' class='comment_button'>";
@@ -213,7 +213,7 @@
                 <input type="password" name="password" value="" placeholder="请输入密码" class="password_input">
                 <br/><br/>
                 <input type="submit" name="submit" value="登录" class="login_input">
-                <a href="file:///Users/wsx9721/Documents/News-Website/register.html"><button type="button" name="button">注册</button></a>
+                <a href="register.php"><button type="button" name="button">注册</button></a>
                 <!-- <button type="submit" name="submit" class="login_button">登录</button> -->
             </form>
         </div>

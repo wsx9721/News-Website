@@ -4,7 +4,12 @@ $username = "root";
 $password = "";
 
     // if ($_POST["SUMBIT"] == "评论") {
-        $comment = $_POST['comment'];
+        if (isset($_POST["comment"])) {
+            $comment = $_POST["comment"];
+        }
+        // if (isset($_POST['comment'])) {
+        //     $comment = $_POST['comment'];
+        // }
         try {
             $conn = new PDO("mysql:host=$servername;dbname=hahaha", $username, $password);
             $sql = "INSERT INTO COMMENTS (two)
