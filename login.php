@@ -13,11 +13,11 @@ $password = "";
 		}
 		else
 		{
-            mysqli_connect("localhost","root","sixx");
+            mysqli_connect("localhost","root","");
 			mysqli_select_db("HAHAHA");
 			// $conn = new PDO("mysql:host=$servername;dbname=hahaha", $username, $password);
 			mysqli_query("set names 'gbk'");
-			$sql = "select two,three from GRADES where two = '$_POST[username]' and three = '$_POST[password]'";
+			$sql = "select two,three from GRADES where two = '$user' and three = '$psw'";
 			$result = mysqli_query($sql);
 			$num = mysqli_num_rows($result);
 			if($num)

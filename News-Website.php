@@ -69,6 +69,13 @@
             .main .show {
                 display: block;
             }
+            .comment {
+                position: absolute;
+                left: 40%;
+                bottom: 5%;
+                width: 300px;
+                height: 200px;
+            }
             .search {
                 position: absolute;
                 right: 15%;
@@ -180,6 +187,21 @@
                 更多
             </div>
         </span>
+        <form class="" action="comment.php" method="POST">
+            <div class="comment">
+                <?php if (isset($_POST['comment'])) {
+                    echo $_POST['comment'];
+                    $_POST['comment'] = null;
+                    echo "<br/>";
+                    echo "<input type='text' name='comment' value='' placeholder='我再说两句...' class='comment_input'>
+                    <input type='SUBMIT' name='SUBMIT' value='评论' class='comment_button'>";
+                }
+                 ?>
+                 <br/>
+                <input type="text" name="comment" value="" placeholder="我来说两句..." class="comment_input">
+                <input type="SUBMIT" name="SUBMIT" value="评论" class="comment_button">
+            </div>
+        </form>
         <div class="search">
             <input type="text" name="" value="" placeholder="请输入要查找的内容" class="search_box">
             <button type="button" name="button" class="search_button">查找</button>
