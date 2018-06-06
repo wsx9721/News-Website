@@ -16,30 +16,6 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `COMMENTS`
---
-
-DROP TABLE IF EXISTS `COMMENTS`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `COMMENTS` (
-  `number` varchar(100) NOT NULL,
-  `comment` text,
-  PRIMARY KEY (`number`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `COMMENTS`
---
-
-LOCK TABLES `COMMENTS` WRITE;
-/*!40000 ALTER TABLE `COMMENTS` DISABLE KEYS */;
-INSERT INTO `COMMENTS` VALUES ('1',''),('10',''),('11',''),('12','ha'),('13',''),('2','ha'),('3','ha'),('4','ha'),('5','ha'),('6','ha'),('7','ha'),('8','ha'),('9','ew');
-/*!40000 ALTER TABLE `COMMENTS` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `HAIXING`
 --
 
@@ -71,11 +47,11 @@ DROP TABLE IF EXISTS `USERS`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `USERS` (
-  `number` varchar(100) NOT NULL,
+  `number` int(11) NOT NULL AUTO_INCREMENT,
   `user` text,
   `password` text,
   PRIMARY KEY (`number`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -84,8 +60,32 @@ CREATE TABLE `USERS` (
 
 LOCK TABLES `USERS` WRITE;
 /*!40000 ALTER TABLE `USERS` DISABLE KEYS */;
-INSERT INTO `USERS` VALUES ('1','001','100'),('10','003','98'),('11','004','96'),('12','005','95'),('13','006','94'),('14','006','94'),('15','007','93'),('16','020','100'),('17','030','200'),('19','300','299'),('8','002','99');
+INSERT INTO `USERS` VALUES (1,'001','100'),(8,'002','99'),(10,'003','98'),(11,'004','96'),(12,'005','95'),(13,'006','94'),(14,'006','94'),(15,'007','93'),(16,'020','100'),(17,'030','200'),(19,'300','299');
 /*!40000 ALTER TABLE `USERS` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `comments`
+--
+
+DROP TABLE IF EXISTS `comments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `comments` (
+  `number` int(11) NOT NULL AUTO_INCREMENT,
+  `comment` text,
+  PRIMARY KEY (`number`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `comments`
+--
+
+LOCK TABLES `comments` WRITE;
+/*!40000 ALTER TABLE `comments` DISABLE KEYS */;
+INSERT INTO `comments` VALUES (1,''),(2,'ha'),(3,'ha'),(4,'ha'),(5,'ha'),(6,'ha'),(7,'ha'),(8,'ha'),(9,'ew'),(10,''),(11,''),(12,'ha'),(13,'');
+/*!40000 ALTER TABLE `comments` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -97,4 +97,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-06 19:10:28
+-- Dump completed on 2018-06-06 19:25:55
