@@ -14,7 +14,7 @@ if($_POST['Submit'] == "注册"){
     if ($psw == $psw_confirm) {
         try {
             $conn = new PDO("mysql:host=$servername;dbname=hahaha", $username, $password);
-            $sql = "INSERT INTO GRADES (two,three)
+            $sql = "INSERT INTO USERS (user,password)
             VALUES ('$user', '$psw')";
             $conn->exec($sql);
         }

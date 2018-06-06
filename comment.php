@@ -12,7 +12,7 @@ $password = "";
         // }
         try {
             $conn = new PDO("mysql:host=$servername;dbname=hahaha", $username, $password);
-            $sql = "INSERT INTO COMMENTS (two)
+            $sql = "INSERT INTO COMMENTS (comment)
             VALUES ('$comment')";
             $conn->exec($sql);
             // echo "<script>alert('评论成功！'); history.go(-1);</script>";

@@ -23,10 +23,10 @@ DROP TABLE IF EXISTS `COMMENTS`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `COMMENTS` (
-  `one` int(11) NOT NULL AUTO_INCREMENT,
-  `two` text,
-  PRIMARY KEY (`one`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+  `number` varchar(100) NOT NULL,
+  `comment` text,
+  PRIMARY KEY (`number`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -35,33 +35,8 @@ CREATE TABLE `COMMENTS` (
 
 LOCK TABLES `COMMENTS` WRITE;
 /*!40000 ALTER TABLE `COMMENTS` DISABLE KEYS */;
-INSERT INTO `COMMENTS` VALUES (1,''),(2,'ha'),(3,'ha'),(4,'ha'),(5,'ha'),(6,'ha'),(7,'ha'),(8,'ha'),(9,'ew'),(10,''),(11,''),(12,'ha'),(13,'');
+INSERT INTO `COMMENTS` VALUES ('1',''),('10',''),('11',''),('12','ha'),('13',''),('2','ha'),('3','ha'),('4','ha'),('5','ha'),('6','ha'),('7','ha'),('8','ha'),('9','ew');
 /*!40000 ALTER TABLE `COMMENTS` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `GRADES`
---
-
-DROP TABLE IF EXISTS `GRADES`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `GRADES` (
-  `one` int(11) NOT NULL AUTO_INCREMENT,
-  `two` text,
-  `three` text,
-  PRIMARY KEY (`one`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `GRADES`
---
-
-LOCK TABLES `GRADES` WRITE;
-/*!40000 ALTER TABLE `GRADES` DISABLE KEYS */;
-INSERT INTO `GRADES` VALUES (1,'001','100'),(8,'002','99'),(10,'003','98'),(11,'004','96'),(12,'005','95'),(13,'006','94'),(14,'006','94'),(15,'007','93'),(16,'020','100'),(17,'030','200'),(19,'300','299');
-/*!40000 ALTER TABLE `GRADES` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -87,6 +62,31 @@ LOCK TABLES `HAIXING` WRITE;
 /*!40000 ALTER TABLE `HAIXING` DISABLE KEYS */;
 /*!40000 ALTER TABLE `HAIXING` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `USERS`
+--
+
+DROP TABLE IF EXISTS `USERS`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `USERS` (
+  `number` varchar(100) NOT NULL,
+  `user` text,
+  `password` text,
+  PRIMARY KEY (`number`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `USERS`
+--
+
+LOCK TABLES `USERS` WRITE;
+/*!40000 ALTER TABLE `USERS` DISABLE KEYS */;
+INSERT INTO `USERS` VALUES ('1','001','100'),('10','003','98'),('11','004','96'),('12','005','95'),('13','006','94'),('14','006','94'),('15','007','93'),('16','020','100'),('17','030','200'),('19','300','299'),('8','002','99');
+/*!40000 ALTER TABLE `USERS` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -97,4 +97,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-06 17:33:39
+-- Dump completed on 2018-06-06 19:10:28
